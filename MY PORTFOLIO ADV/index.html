@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Umair Farooqui - Web Developer Portfolio. Building responsive frontend interfaces and full-stack web applications with JavaScript, Node.js, and MySQL." />
+  <meta name="keywords" content="Frontend Developer, Full-Stack Developer, Web Developer, HTML, CSS, JavaScript, Node.js, MySQL, Umair Farooqui" />
+  <meta name="author" content="Umair Farooqui" />
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Umair Farooqui | Web Developer Portfolio" />
+  <meta property="og:description" content="Explore my portfolio, featured full-stack projects including PROBLEM-X, responsive websites, and skills." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="problem-x.png" />
+
+  <!-- Clean Monogram Favicon (No Emojis) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23aa6be4'/><text x='50%' y='68%' font-size='52' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>UF</text></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Fira+Code:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>Umair Farooqui | Web Developer Portfolio</title>
+</head>
+
+<body class="dark-mode">
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="loader-simple"><span id="percent">0</span>%</div>
+  </div>
+
+  <!-- PARTICLES BACKGROUND -->
+  <div id="particles-js"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="nav">
+      <a href="#home" class="logo">
+        Farooqui<span class="purple">.dev</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#skill" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Nav Actions (Terminal, Theme Toggle & Hamburger) -->
+      <div class="nav-actions">
+        <button class="terminal-btn" id="openTerminalBtn" aria-label="Open Interactive Terminal" title="Developer Terminal (CLI)">
+          <i class="fas fa-terminal"></i>
+          <span class="terminal-btn-text">Terminal</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <span class="logo">Farooqui<span class="purple">.dev</span></span>
+      <button class="close-mobile-nav" id="closeMobileNav" aria-label="Close Menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-link active"><i class="fas fa-house"></i> Home</a></li>
+      <li><a href="#about" class="mobile-link"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#services" class="mobile-link"><i class="fas fa-briefcase"></i> Services</a></li>
+      <li><a href="#skill" class="mobile-link"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="#projects" class="mobile-link"><i class="fas fa-layer-group"></i> Projects</a></li>
+      <li><a href="#contact" class="mobile-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="javascript:void(0)" class="mobile-link" id="mobileTerminalLink"><i class="fas fa-terminal"></i> Dev Terminal</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <div class="social-icons">
+        <a href="https://github.com/Farooqui-codes" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/farooqui-md-umair-9141b6317/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://wa.me/919004920733" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:fmdumair07@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="firstsection" id="home">
+      <div class="leftsection">
+        <div class="hero-status-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for New Opportunities</span>
+        </div>
+        <h2 class="hero-intro">Hi, My name is</h2>
+        <h1 class="hero-name purple">Umair Farooqui</h1>
+        <div class="hero-role-wrapper">
+          <span>I am a passionate</span>
+          <span id="element" class="typed-text"></span>
+        </div>
+        <p class="hero-desc">
+          I build responsive web interfaces and full-stack web applications using JavaScript, Node.js, and MySQL. Developer of <strong>PROBLEM-X</strong>.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="buttons">
+          <button class="btn btn-primary" id="viewResumeBtn" title="Preview Resume in browser">
+            <i class="fas fa-eye"></i> View Resume
+          </button>
+          <a href="MY_Resume.pdf" download class="btn btn-secondary" title="Download PDF Resume">
+            <i class="fas fa-file-arrow-down"></i> Download CV
+          </a>
+        </div>
+
+        <!-- Hero Quick Social Links -->
+        <div class="hero-socials">
+          <span class="social-label">Connect:</span>
+          <a href="https://github.com/Farooqui-codes" target="_blank" title="GitHub" class="hero-social-link">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/farooqui-md-umair-9141b6317/" target="_blank" title="LinkedIn" class="hero-social-link">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/919004920733" target="_blank" title="WhatsApp" class="hero-social-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:fmdumair07@gmail.com" title="Email" class="hero-social-link">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="rightsection">
+        <div class="hero-glow"></div>
+        <img src="bg1.png" alt="Umair Farooqui - Web Developer" />
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ABOUT SECTION + TIMELINE -->
+    <section class="about-section reveal" id="about">
+      <div class="section-header">
+        <span class="gray">Get To Know More</span>
+        <h1>About Me</h1>
+        <div class="header-underline"></div>
+      </div>
+
+      <div class="about-container">
+        <div class="about-card-intro">
+          <div class="about-badge-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Web Developer</h3>
+          <p>
+            Hello! I'm <strong>Umair Farooqui</strong>, a web developer based in Mumbai, India.
+          </p>
+          <p>
+            I build responsive frontend websites and full-stack web applications. I focus on writing clean, maintainable code and building practical solutions that work reliably across all device screens.
+          </p>
+          <p>
+            Recently, I built and deployed <strong>PROBLEM-X</strong>, a smart civic grievance management system on Render that helps citizens report municipal issues and track their progress online.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i> Clean, Semantic HTML & Modern CSS
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i> Responsive Mobile-First Development
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i> Practical Full-Stack Experience (Node.js & MySQL)
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-folder-open"></i></div>
+            <div class="stat-number">4+</div>
+            <div class="stat-title">Completed Projects</div>
+            <p class="stat-desc">Live applications hosted on Render, Vercel & Netlify</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-mobile-screen"></i></div>
+            <div class="stat-number">100%</div>
+            <div class="stat-title">Responsive Design</div>
+            <p class="stat-desc">Clean layouts for mobile, tablet, and desktop</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+            <div class="stat-number">Full-Stack</div>
+            <div class="stat-title">Development</div>
+            <p class="stat-desc">Frontend interfaces with Node.js APIs & MySQL databases</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+            <div class="stat-number">Quick</div>
+            <div class="stat-title">Learner</div>
+            <p class="stat-desc">Adapting quickly to new tools, libraries, and workflows</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOURNEY & EDUCATION TIMELINE -->
+      <div class="timeline-container">
+        <h2 class="timeline-heading"><i class="fas fa-graduation-cap"></i> My Learning & Development Journey</h2>
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2026 - Present</div>
+            <div class="timeline-content">
+              <h3>Full-Stack Web Development</h3>
+              <span class="timeline-subtitle">Node.js, Express, MySQL & Cloud Deployment</span>
+              <p>
+                Built and deployed <strong>PROBLEM-X</strong>, a smart city grievance management system on Render with responsive report submission, REST APIs, and database persistence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 - 2025</div>
+            <div class="timeline-content">
+              <h3>Frontend Development & UI Design</h3>
+              <span class="timeline-subtitle">HTML5, Modern CSS3, JavaScript (ES6+)</span>
+              <p>
+                Built e-commerce storefronts, agency websites, interactive DOM workflows, CSS Grid and Flexbox layouts, and mobile-friendly user interfaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Foundations</div>
+            <div class="timeline-content">
+              <h3>Computer Science Fundamentals</h3>
+              <span class="timeline-subtitle">Programming Logic, Web Standards & Relational Databases</span>
+              <p>
+                Learned software logic, database modeling, basic SQL queries with MySQL, and web fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- SERVICES / WHAT I DO SECTION -->
+    <section class="services-section reveal" id="services">
+      <div class="section-header">
+        <span class="gray">What I Offer</span>
+        <h1>Services & Capabilities</h1>
+        <div class="header-underline"></div>
+        <p class="contact-subtitle">
+          Building practical web solutions from frontend user interfaces to backend API integration.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card tilt-card">
+          <div class="service-icon-box">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>
+            Building responsive, clean, and modern websites using HTML5, CSS3, and JavaScript (ES6+). Focused on smooth user interaction and mobile compatibility.
+          </p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Mobile-first responsive layouts</li>
+            <li><i class="fas fa-check"></i> Clean CSS styling & animations</li>
+            <li><i class="fas fa-check"></i> Dynamic DOM manipulation with JS</li>
+          </ul>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card tilt-card">
+          <div class="service-icon-box fullstack-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Full-Stack Web Apps</h3>
+          <p>
+            Developing complete web applications with Node.js and Express. Creating structured RESTful endpoints and connecting frontend forms with backend logic.
+          </p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> REST API development</li>
+            <li><i class="fas fa-check"></i> Express routing & middleware</li>
+            <li><i class="fas fa-check"></i> Deployment on Render and Vercel</li>
+          </ul>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card tilt-card">
+          <div class="service-icon-box db-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Database Management</h3>
+          <p>
+            Creating structured relational database schemas using MySQL. Writing SQL queries for storing, updating, and fetching application data safely.
+          </p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> MySQL table schema design</li>
+            <li><i class="fas fa-check"></i> CRUD operations & SQL queries</li>
+            <li><i class="fas fa-check"></i> Data relationships & storage</li>
+          </ul>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card tilt-card">
+          <div class="service-icon-box perf-icon">
+            <i class="fas fa-gauge-high"></i>
+          </div>
+          <h3>Website Optimization</h3>
+          <p>
+            Refining existing web pages for faster load times, clean cross-browser behavior, and proper HTML structure for search visibility.
+          </p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Fast page load performance</li>
+            <li><i class="fas fa-check"></i> Cross-browser testing</li>
+            <li><i class="fas fa-check"></i> Proper SEO meta tags setup</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- SKILLS SECTION -->
+    <section class="secondsection reveal" id="skill">
+      <div class="section-header">
+        <span class="gray">Technical Proficiency</span>
+        <h1>Technical Skills</h1>
+        <div class="header-underline"></div>
+      </div>
+
+      <!-- Skills Category Tabs -->
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend & DB</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- JavaScript Card -->
+        <div class="skill-card js-card tilt-card" data-category="frontend">
+          <div class="skill-icon-wrapper">
+            <img src="javascript.svg" alt="JavaScript logo" />
+          </div>
+          <h3>JavaScript (ES6+)</h3>
+          <p>
+            Writing interactive client-side logic, manipulating DOM elements, handling asynchronous requests with Fetch API and Async/Await, and form validation.
+          </p>
+          <div class="skill-badges">
+            <span class="s-tag">DOM Manipulation</span>
+            <span class="s-tag">ES6+</span>
+            <span class="s-tag">Fetch API</span>
+          </div>
+        </div>
+
+        <!-- HTML5 Card -->
+        <div class="skill-card html-card tilt-card" data-category="frontend">
+          <div class="skill-icon-wrapper">
+            <img src="html-5.png" alt="HTML5 logo" />
+          </div>
+          <h3>HTML5</h3>
+          <p>
+            Building semantic, accessible, and structured page layouts. Creating forms, multimedia elements, navigation trees, and clean document hierarchy.
+          </p>
+          <div class="skill-badges">
+            <span class="s-tag">Semantic HTML</span>
+            <span class="s-tag">SEO Best Practices</span>
+            <span class="s-tag">Forms & Validation</span>
+          </div>
+        </div>
+
+        <!-- CSS3 Card -->
+        <div class="skill-card css-card tilt-card" data-category="frontend">
+          <div class="skill-icon-wrapper">
+            <img src="css-3.png" alt="CSS3 logo" />
+          </div>
+          <h3>CSS3</h3>
+          <p>
+            Styling modern, responsive web pages. Working with Flexbox, CSS Grid, media queries for mobile devices, animations, and custom color variables.
+          </p>
+          <div class="skill-badges">
+            <span class="s-tag">Flexbox & Grid</span>
+            <span class="s-tag">Transitions</span>
+            <span class="s-tag">Dark/Light Themes</span>
+          </div>
+        </div>
+
+        <!-- Node.js Card -->
+        <div class="skill-card node-card tilt-card" data-category="backend">
+          <div class="skill-icon-wrapper">
+            <img src="NODE JS.png" alt="Node.js logo" />
+          </div>
+          <h3>Node.js & Express</h3>
+          <p>
+            Building server-side applications and RESTful APIs. Configuring HTTP routes, middleware, and connecting backend logic with client requests.
+          </p>
+          <div class="skill-badges">
+            <span class="s-tag">REST APIs</span>
+            <span class="s-tag">Express.js</span>
+            <span class="s-tag">Server Routing</span>
+          </div>
+        </div>
+
+        <!-- MySQL Card -->
+        <div class="skill-card mysql-card tilt-card" data-category="backend">
+          <div class="skill-icon-wrapper">
+            <img src="mysql.png" alt="MySQL logo" />
+          </div>
+          <h3>MySQL</h3>
+          <p>
+            Designing relational database tables, writing SQL queries for CRUD operations, handling data connections, and managing table relations.
+          </p>
+          <div class="skill-badges">
+            <span class="s-tag">Relational DB</span>
+            <span class="s-tag">CRUD Operations</span>
+            <span class="s-tag">SQL Queries</span>
+          </div>
+        </div>
+
+        <!-- Git & GitHub Card -->
+        <div class="skill-card git-card tilt-card" data-category="tools">
+          <div class="skill-icon-wrapper">
+            <i class="fa-brands fa-git-alt skill-icon-fa"></i>
+          </div>
+          <h3>Git & GitHub</h3>
+          <p>
+            Managing version control, tracking changes, publishing repositories on GitHub, and deploying live websites on Vercel, Netlify, and Render.
+          </p>
+          <div class="skill-badges">
+            <span class="s-tag">Version Control</span>
+            <span class="s-tag">GitHub Hosting</span>
+            <span class="s-tag">Render / Vercel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section reveal" id="projects">
+      <div class="section-header">
+        <span class="gray">Portfolio Showcase</span>
+        <h1>Featured Projects</h1>
+        <div class="header-underline"></div>
+      </div>
+
+      <!-- Project Filter Tabs -->
+      <div class="projects-filter">
+        <button class="project-filter-btn active" data-pfilter="all">All Projects</button>
+        <button class="project-filter-btn" data-pfilter="fullstack">Full-Stack</button>
+        <button class="project-filter-btn" data-pfilter="frontend">Frontend</button>
+      </div>
+
+      <div class="projects-container">
+        <!-- PROJECT 1: PROBLEM-X (FEATURED STAR PROJECT) -->
+        <div class="project project-featured tilt-card" data-pcategory="fullstack">
+          <div class="project-badge">
+            <i class="fas fa-star"></i> Featured Full-Stack
+          </div>
+          <div class="project-image">
+            <img src="problem-x.png" alt="PROBLEM-X - Smart City Civic Grievance Management" />
+            <div class="project-overlay">
+              <a href="https://problem-x.onrender.com/" target="_blank" class="overlay-btn" title="View Live">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="overlay-btn" title="View Code">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category-tag">Civic Tech Platform</div>
+            <h3>PROBLEM-X | Smart City Grievance Management</h3>
+            <p>
+              A full-stack web application that allows citizens to report municipal problems (road damage, street lighting, drainage) and track their resolution progress in real time.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Render Deployed</span>
+              <span class="tag">Full-Stack</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://problem-x.onrender.com/" target="_blank" class="project-btn primary-btn" title="Open Live Site">
+                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <button class="project-btn case-study-btn" id="openCaseStudyBtn" title="Read Case Study">
+                <i class="fas fa-file-lines"></i> Case Study
+              </button>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="project-btn secondary-btn" title="View Source Code">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: TrendVibe E-Commerce -->
+        <div class="project tilt-card" data-pcategory="frontend">
+          <div class="project-badge">Frontend Web App</div>
+          <div class="project-image">
+            <img src="pro-2.png" alt="TrendVibe - Modern E-Commerce Platform" />
+            <div class="project-overlay">
+              <a href="https://ecommers-webpage-6stn.vercel.app/" target="_blank" class="overlay-btn" title="View Live">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="overlay-btn" title="View Code">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category-tag">E-Commerce</div>
+            <h3>TrendVibe | Online Storefront</h3>
+            <p>
+              A responsive e-commerce web interface with product catalogs, interactive cart functionality, product filtering, and mobile-optimized browsing.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Vercel Deployed</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://ecommers-webpage-6stn.vercel.app/" target="_blank" class="project-btn primary-btn">
+                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="project-btn secondary-btn">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: NexGen Agency Landing -->
+        <div class="project tilt-card" data-pcategory="frontend">
+          <div class="project-badge">Landing Page</div>
+          <div class="project-image">
+            <img src="pro-1.png" alt="NexGen Digital - Agency Showcase" />
+            <div class="project-overlay">
+              <a href="https://699322da7eda1562441cf74d--kaleidoscopic-paprenjak-a472e9.netlify.app/" target="_blank" class="overlay-btn" title="View Live">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="overlay-btn" title="View Code">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category-tag">Agency Portfolio</div>
+            <h3>NexGen Digital | Agency Landing Page</h3>
+            <p>
+              A responsive business landing page featuring clean typography, modern layout structure, CSS transitions, and mobile-friendly design.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">Netlify Deployed</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://699322da7eda1562441cf74d--kaleidoscopic-paprenjak-a472e9.netlify.app/" target="_blank" class="project-btn primary-btn">
+                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="project-btn secondary-btn">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: ShopPulse Store -->
+        <div class="project tilt-card" data-pcategory="fullstack">
+          <div class="project-badge in-dev">In Development</div>
+          <div class="project-image">
+            <img src="pro-3.png" alt="ShopPulse - Backend Integrated Store" />
+            <div class="project-overlay">
+              <button onclick="showToast('ShopPulse is in active development. Check back soon.')" class="overlay-btn" title="Coming Soon">
+                <i class="fas fa-clock"></i>
+              </button>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="overlay-btn" title="View Code">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category-tag">Full-Stack Store</div>
+            <h3>ShopPulse | Backend Integrated Web App</h3>
+            <p>
+              A full-stack web application integrating database tables with user authentication routes, inventory management, and order handling.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Backend API</span>
+              <span class="tag">Full-Stack</span>
+            </div>
+            <div class="project-buttons">
+              <button onclick="showToast('ShopPulse is in active development. Check back soon.')" class="project-btn primary-btn btn-coming-soon">
+                <i class="fas fa-clock"></i> In Progress
+              </button>
+              <a href="https://github.com/Farooqui-codes" target="_blank" class="project-btn secondary-btn">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section reveal" id="contact">
+      <div class="section-header">
+        <span class="gray">Let's Connect</span>
+        <h1>Get In Touch</h1>
+        <div class="header-underline"></div>
+        <p class="contact-subtitle">
+          Have an opportunity, a project to discuss, or any question? Feel free to reach out directly or send a message below.
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Contact Information Cards -->
+        <div class="contact-info-col">
+          <a href="mailto:fmdumair07@gmail.com" class="contact-card email-card" title="Send an Email">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-card-text">
+              <h4>Email</h4>
+              <p>fmdumair07@gmail.com</p>
+              <span class="contact-action"><i class="fas fa-arrow-right"></i> Send email</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/919004920733" target="_blank" class="contact-card" title="Chat on WhatsApp">
+            <div class="contact-icon-box whatsapp-box">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-card-text">
+              <h4>WhatsApp / Phone</h4>
+              <p>+91 90049 20733</p>
+              <span class="contact-action"><i class="fas fa-arrow-right"></i> Chat on WhatsApp</span>
+            </div>
+          </a>
+
+          <div class="contact-card location-card">
+            <div class="contact-icon-box location-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-card-text">
+              <h4>Location</h4>
+              <p>Mumbai, Maharashtra, India</p>
+              <span class="contact-action">Open to remote & onsite roles</span>
+            </div>
+          </div>
+
+          <div class="contact-card availability-card">
+            <div class="contact-icon-box check-box">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="contact-card-text">
+              <h4>Current Status</h4>
+              <p>Open for Frontend & Full-Stack Opportunities</p>
+              <span class="contact-action">Available immediately</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-col">
+          <div id="message" style="display: none"></div>
+
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d6c2fab3-1444-4453-b001-641b1f966dee" />
+            <div class="form-group">
+              <label for="formName">Your Name</label>
+              <input type="text" id="formName" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="formEmail">Your Email</label>
+              <input type="email" id="formEmail" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="formPhone">Your Phone (Optional)</label>
+              <input type="tel" id="formPhone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label for="formMessage">Your Message</label>
+              <textarea id="formMessage" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit" id="submitBtn">
+              <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span id="spinner" style="display: none">
+                <i class="fas fa-spinner fa-spin"></i> Sending Message...
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Umair Farooqui</h3>
+        <p>
+          Web developer focused on building clean, responsive, and reliable websites and full-stack applications.
+        </p>
+        <div class="footer-status-pill">
+          <span class="pulse-dot"></span> Available for work
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Tech Stack</h4>
+        <ul>
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Node.js & Express</li>
+          <li>MySQL Relational DB</li>
+          <li>Git & GitHub Hosting</li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <p class="footer-email">
+          <i class="fa-solid fa-envelope"></i> fmdumair07@gmail.com
+        </p>
+        <p class="footer-phone">
+          <i class="fa-solid fa-phone"></i> +91 90049 20733
+        </p>
+        <div class="social-icons">
+          <a href="https://github.com/Farooqui-codes" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/farooqui-md-umair-9141b6317/" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/umair.here.07?igsh=MTdiYjRwZDRyczdrYw==" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/919004920733" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="currentYear">2026</span> Umair Farooqui | All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON (NO EMOJIS, PURE FONT AWESOME) -->
+  <a href="https://wa.me/919004920733?text=Hi%20Umair,%20I%20saw%20your%20portfolio!" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</span>
+  </a>
+
+  <!-- BACK TO TOP BUTTON (BOTTOM-RIGHT) -->
+  <button id="backToTop" title="Go to top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fas fa-file-pdf text-purple"></i> Umair_Farooqui_Resume.pdf
+        </div>
+        <div class="modal-actions">
+          <a href="MY_Resume.pdf" download class="modal-download-btn">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <button class="modal-close-btn" id="closeResumeModal" aria-label="Close Resume">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="MY_Resume.pdf" title="Umair Farooqui Resume" class="resume-iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY MODAL: PROBLEM-X -->
+  <div class="modal-overlay" id="caseStudyModal">
+    <div class="modal-container case-study-modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fas fa-diagram-project purple"></i> Case Study: PROBLEM-X
+        </div>
+        <button class="modal-close-btn" id="closeCaseStudyBtn" aria-label="Close Case Study">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body case-study-body">
+        <!-- Project Banner Summary -->
+        <div class="cs-hero-card">
+          <div class="cs-badge"><i class="fas fa-star"></i> Flagship Full-Stack Project</div>
+          <h2>PROBLEM-X: Smart City Civic Grievance Management</h2>
+          <p>
+            An end-to-end civic complaint portal that enables citizens to report local municipal issues (potholes, broken street lights, pipeline bursts, drainage problems) and track their resolution progress transparently.
+          </p>
+          <div class="cs-links">
+            <a href="https://problem-x.onrender.com/" target="_blank" class="btn btn-primary">
+              <i class="fas fa-arrow-up-right-from-square"></i> Visit Live App
+            </a>
+            <a href="https://github.com/Farooqui-codes" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i> View GitHub Repo
+            </a>
+          </div>
+        </div>
+
+        <!-- 2-Column Details -->
+        <div class="cs-grid">
+          <!-- Problem & Solution -->
+          <div class="cs-block">
+            <h3><i class="fas fa-circle-exclamation purple"></i> The Problem</h3>
+            <p>
+              In many municipalities, reporting civic issues like broken streetlights or damaged roads is complicated. Complaints submitted manually or through phone lines often get delayed without any tracking number or accountability for citizens.
+            </p>
+
+            <h3 class="mt-20"><i class="fas fa-lightbulb text-cyan"></i> The Solution</h3>
+            <p>
+              PROBLEM-X provides a direct, online portal where any citizen can select a category, upload photo evidence, provide location details, and submit a grievance. The system generates an immediate tracking status and routes the complaint to the relevant city department.
+            </p>
+          </div>
+
+          <!-- Architecture & Stack -->
+          <div class="cs-block">
+            <h3><i class="fas fa-layer-group purple"></i> Technical Architecture</h3>
+            <ul class="cs-tech-list">
+              <li>
+                <strong>Frontend:</strong> Semantic HTML5, modern CSS3 layout (Flexbox/Grid), and vanilla JavaScript for dynamic client-side validation.
+              </li>
+              <li>
+                <strong>Backend:</strong> Node.js and Express RESTful API handling complaint routing, form data parsing, and status queries.
+              </li>
+              <li>
+                <strong>Database:</strong> MySQL database schema with relational tables for complaints, categories, department assignments, and resolution stages.
+              </li>
+              <li>
+                <strong>Deployment:</strong> Hosted on Render with production environment variables and continuous Git delivery.
+              </li>
+            </ul>
+
+            <h3 class="mt-20"><i class="fas fa-list-check text-emerald"></i> Key Features Built</h3>
+            <ul class="cs-feature-list">
+              <li><i class="fas fa-check"></i> Citizen complaint filing with image attachment & location</li>
+              <li><i class="fas fa-check"></i> Real-time status stages (Pending, In Progress, Resolved)</li>
+              <li><i class="fas fa-check"></i> Administrative overview & grievance categorization</li>
+              <li><i class="fas fa-check"></i> Direct helpline & WhatsApp query integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE DEVELOPER TERMINAL MODAL -->
+  <div class="modal-overlay" id="terminalModal">
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red" id="closeTerminalBtn" title="Close Terminal"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="terminal-title">
+          <i class="fas fa-terminal"></i> umair@portfolio: ~ (bash)
+        </div>
+        <button class="terminal-close" id="closeTerminalX">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="terminal-line banner-line">
+          Welcome to <span class="purple-text font-bold">Umair's Developer Terminal</span> [v2.4.0]
+        </div>
+        <div class="terminal-line text-muted-line">
+          Type <span class="accent-text">'help'</span> to see available commands or click shortcuts below.
+        </div>
+        <div class="terminal-shortcuts">
+          <button class="t-shortcut" onclick="runCommand('help')">help</button>
+          <button class="t-shortcut" onclick="runCommand('skills')">skills</button>
+          <button class="t-shortcut" onclick="runCommand('projects')">projects</button>
+          <button class="t-shortcut" onclick="runCommand('about')">about</button>
+          <button class="t-shortcut" onclick="runCommand('contact')">contact</button>
+          <button class="t-shortcut" onclick="runCommand('clear')">clear</button>
+        </div>
+        <div id="terminalHistory"></div>
+        <div class="terminal-input-row">
+          <span class="terminal-prompt">umair@dev:~$</span>
+          <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" autofocus />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- EXTERNAL SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- CUSTOM JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+
+</html>
