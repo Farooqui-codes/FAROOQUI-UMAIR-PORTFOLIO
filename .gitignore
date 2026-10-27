@@ -13,3 +13,6 @@ desktop.ini
 
 # Logs
 *.log
+
+# Local deployment helper
+deploy-to-github.ps1
