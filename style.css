@@ -2344,6 +2344,12 @@ body.light-mode .site-footer {
   margin-left: 2px;
 }
 
+.status-env {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
 /* ==========================================================================
    GITHUB LIVE STATS & ACTIVITY SECTION
    ========================================================================== */
