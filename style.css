@@ -2345,6 +2345,12 @@ body.light-mode .site-footer {
 }
 
 .status-env {
+  opacity: 0.75;
+  font-size: 0.68rem;
+  margin-left: 2px;
+}
+
+.status-env {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.3px;
