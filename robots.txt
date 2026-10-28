@@ -1,0 +1,6 @@
+# Robots.txt for Umair Farooqui Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap URL
+Sitemap: https://farooqui-codes.github.io/FAROOQUI-UMAIR-PORTFOLIO/sitemap.xml

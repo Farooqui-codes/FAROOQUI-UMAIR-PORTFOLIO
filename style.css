@@ -114,7 +114,8 @@ body {
   margin-bottom: 8px;
 }
 
-.section-header h1 {
+.section-header h1,
+.section-header h2 {
   font-size: 2.3rem;
   font-weight: 700;
   color: var(--text-white);
@@ -1310,6 +1311,55 @@ body.light-mode .hero-name {
   background: rgba(245, 158, 11, 0.2) !important;
   color: #fbbf24 !important;
   border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Case Study Full Button */
+.case-study-full-btn {
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 85px;
+  transition: all var(--transition-fast);
+}
+
+.case-study-full-btn:hover {
+  background: var(--accent-cyan);
+  color: #07071c;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+}
+
+/* Project Status Badge (replaces false-affordance button) */
+.project-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+  flex: 1;
+  min-width: 85px;
+  justify-content: center;
+}
+
+.project-status-badge.in-progress {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 /* ==========================================================================
