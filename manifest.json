@@ -9,15 +9,15 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='38' fill='%23aa6be4'/><text x='50%' y='67%' font-size='96' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>UF</text></svg>",
+      "src": "favicon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='102' fill='%23aa6be4'/><text x='50%' y='67%' font-size='256' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>UF</text></svg>",
+      "src": "favicon.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

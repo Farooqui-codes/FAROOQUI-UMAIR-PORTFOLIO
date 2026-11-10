@@ -165,11 +165,31 @@ body {
   text-decoration: none;
   color: var(--text-white);
   letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   transition: transform var(--transition-fast);
 }
 
 .logo:hover {
   transform: scale(1.03);
+}
+
+.nav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 2px solid var(--primary-purple);
+  box-shadow: 0 0 12px rgba(170, 107, 228, 0.45);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.logo:hover .nav-avatar {
+  transform: rotate(6deg) scale(1.08);
+  box-shadow: 0 0 18px rgba(170, 107, 228, 0.75);
 }
 
 .nav-menu ul {
@@ -3218,6 +3238,11 @@ body.light-mode .toast {
 @media screen and (max-width: 380px) {
   .logo {
     font-size: 1.35rem;
+    gap: 8px;
+  }
+  .nav-avatar {
+    width: 30px;
+    height: 30px;
   }
   .hero-name {
     font-size: 1.85rem;

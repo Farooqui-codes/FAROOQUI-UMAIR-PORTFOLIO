@@ -1,11 +1,14 @@
 // Service Worker for Umair Farooqui Portfolio (PWA)
-const CACHE_NAME = "umair-portfolio-v1";
+const CACHE_NAME = "umair-portfolio-v2";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./style.css",
   "./script.js",
   "./manifest.json",
+  "./profile.jpg",
+  "./favicon.png",
+  "./favicon-192.png",
   "./bg1.png",
   "./problem-x.png",
   "./pro-1.png",
